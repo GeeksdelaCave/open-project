@@ -418,12 +418,12 @@
             <div class="row">
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="overlay-container overlay-visible">
-                        <img src="images/team-member-1.jpg" alt="">
+                        <img src="pictures/photoAnais.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-6">
                     <div class="body">
-                        <h3 class="title margin-clear">Anais DIAZ - <small>Absente</small></h3>
+                        <h3 class="title margin-clear">Anais DIAZ - <small>XYZ</small></h3>
                         <div class="separator-2 mt-10"></div>
                         <p>.</p>
                         <ul class="social-links circle margin-clear colored">
