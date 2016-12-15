@@ -21,7 +21,7 @@
             <div class="col-md-8 text-center col-md-offset-2 pv-20">
                 <h2 class="title object-non-visible" data-animation-effect="fadeIn" data-effect-delay="100">Qui sommes nous ?</h2>
                 <div class="separator object-non-visible mt-10" data-animation-effect="fadeIn" data-effect-delay="100"></div>
-                <p class="text-center object-non-visible" data-animation-effect="fadeIn" data-effect-delay="100">Open-project est née d'un esprit universitaire en constante évolution.Réalisée en plein coeur de l'IUT d'Aix en Provence à l'Université d ' Aix-Marseille, notre équipe a souhaité à travers ce site web vous offrir les outils et les personnes nécessaires à la concrétisation de vos rêves conceptuels.</p>
+                <p class="text-center object-non-visible" data-animation-effect="fadeIn" data-effect-delay="100">Open-project est né d'un esprit universitaire en constante évolution. Réalisée en plein coeur du département Informatique de l'IUT d'Aix-Marseille Université, site d'Aix, notre équipe a souhaité vous offrir à travers ce site web les outils et les personnes nécessaires à la concrétisation de vos projets.</p>
             </div>
         </div>
     </div>
