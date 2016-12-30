@@ -247,7 +247,7 @@
             <div class="row">
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="overlay-container overlay-visible">
-                        <img src="pictures/photoRomain.jpg" alt="">
+                        <img src="pictures/photoRomain2.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-6">

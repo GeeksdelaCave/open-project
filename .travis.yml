@@ -1,0 +1,23 @@
+# Script pour Travis-CI
+
+# Définition du langage sur Java
+language: php
+
+# Désactivation du sudo pour le script qui suit : les conteneurs Travis-CI ne le prennent pas en compte
+sudo: false
+
+# Branches à ajouter à la compilation
+branches:
+  only:
+  - master
+  - develop
+
+# Spécification des JDK avec lesquels compiler
+php:
+  - '5.4'
+  - '5.5'
+  - '5.6'
+  - '7.0'
+  - '7.1'
+  - hhvm
+  - nightly
