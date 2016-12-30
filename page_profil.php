@@ -240,7 +240,4 @@
 ?>
 
 <?php
-    include 'Footer.php';
-    end_page();
-    js2();
-?>
+    require_once 'footer.php';
