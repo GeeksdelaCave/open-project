@@ -26,7 +26,7 @@
 						</div> -->
 
 						<div class="form-block center-block p-30 light-gray-bg border-clear text-left">
-							<h2 class="title">Sign Up</h2>
+							<h2 class="title"> Inscription </h2>
 							<form class="form-horizontal" role="form">
 
 								<div class="form-group has-feedback">
