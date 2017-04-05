@@ -13,9 +13,9 @@ $retour = new stdClass();
 if(isset($_POST['mail']) && isset($_POST['password'])){
     $user = new User($_POST['mail'], $_POST['password']);
     if($user->isAvailable()) {
-        $message = true;
         $_SESSION['user'] = $user;
         $_SESSION['is_connect'] = true;
+        $message = true;
     }
 }
 $retour->message = $message;

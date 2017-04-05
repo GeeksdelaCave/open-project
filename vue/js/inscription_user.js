@@ -7,7 +7,7 @@
 $(document).ready(function () {
     var nom = $('#nom'),
         prenom = $('#prenom'),
-        age = $('#age'),
+        diplome = $('#diplome'),
         metier = $('#metier'),
         e_mail = $('#mail'),
         password = $('#mdp'),
@@ -16,7 +16,7 @@ $(document).ready(function () {
         window.location.assign('http://open-project.dromcorp.eu');
     });
     $('form').submit(function () {
-        if (mots_de_passe_identiques(password, confirm_password) && verifier_inscription(nom, prenom, age, e_mail, metier)) {
+        if (mots_de_passe_identiques(password, confirm_password) && verifier_inscription(nom, prenom, diplome, e_mail, metier)) {
             $.ajax({
                 type: $(this).attr('method'),
                 url: $(this).attr('action'),
@@ -45,8 +45,8 @@ function verifier(champ){
     return champ.val() != "";
 
 }
-function verifier_inscription(nom, prenom, age, mail, metier){
-    return (verifier(nom) && verifier(prenom) && verifier(age) && verifier(mail) && verifier(metier));
+function verifier_inscription(nom, prenom, diplome, mail, metier){
+    return (verifier(nom) && verifier(prenom) && verifier(diplome) && verifier(mail) && verifier(metier));
 }
 
 function mots_de_passe_identiques(mdp, mdp_confirme){

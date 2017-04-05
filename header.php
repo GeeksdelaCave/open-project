@@ -1,3 +1,5 @@
 <?php
  // A insérer dans tous les contrôleurs
- session_start();
+require_once 'modele/user.php';
+
+session_start();

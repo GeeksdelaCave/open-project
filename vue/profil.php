@@ -4,7 +4,7 @@
 
         <!-- banner start -->
         <!-- ================ -->
-        <div class="banner default-translucent-bg" style="background-image:url('vue/images/page-about-me-banner.jpg'); background-position: 50%;">
+        <div class="banner default-translucent-bg" style="background-position: 50%;">
             <!-- breadcrumb start -->
             <!-- ================ -->
             <div class="breadcrumb-container">
@@ -40,7 +40,7 @@
 
                         <!-- page-title start -->
                         <!-- ================ -->
-                        <h1 class="page-title">Profil user</h1>
+                        <h1 class="page-title"><?php  echo ($_SESSION['user']->getSecondName() . " " . $_SESSION['user']->getFirstName());?></h1>
                         <div class="separator-2"></div>
                         <!-- page-title end -->
                         <div class="row">
@@ -49,12 +49,6 @@
                                     <div class="overlay-container overlay-visible">
                                         <img src="vue/images/team-member-3.jpg" alt="">
                                         <a href="vue/images/team-member-3.jpg" class="popup-img overlay-link"></a>
-                                        <div class="overlay-bottom">
-                                            <div class="text">
-                                                <h3 class="title margin-clear">Jane Doe</h3>
-                                                <p class="margin-clear">CTO</p>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -89,15 +83,17 @@
                                 </div>
                             </div>
                             <div class="col-sm-2 col-lg-offset-1">
-                                <h2 class="page-title"> Diplômes </h2>
+                                <h2 class="page-title"> Métier </h2>
                                 <div class="separator-2"></div>
-                                <p class="title"> . Ingénieur en mécanique quantique</p> <br/>
-                                <p class="title"> . DUT de physique chimie</p> <br/>
-                                <p class="title"> . Bac scientifique</p>
-                                <br/> <br/>
+                                <p class="title"></p>
+                                <br/> <?php echo $_SESSION['user']->getJob();?> <br/> <br/> <br/> <br/>
+                                <h2 class="page-title"> Diplôme</h2>
+                                <div class="separator-2"></div>
+                                <p class="title"></p>
+                                <br/> <?php echo $_SESSION['user']->getDiplomes();?> <br/> <br/> <br/> <br/>
                                 <h3 class="page-title">Me contacter</h3>
                                 <ul class="list-icons">
-                                    <li><a href="mailto:thibaud.cenent.pro@gmail.com"><i class="fa fa-envelope-o pr-10"></i> thibaud.cenent.pro@gmail.com</a></li>
+                                    <li><a href="<?php echo $_SESSION['user']->getEmail();?>"><i class="fa fa-envelope-o pr-10"></i> <?php echo $_SESSION['user']->getEmail();?></a></li>
                                 </ul>
                             </div>
                         </div>

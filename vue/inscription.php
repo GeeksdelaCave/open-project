@@ -40,13 +40,13 @@
 									</div>
 								</div>
 
-								<div class="form-group has-feedback">
-									<label class="col-sm-3 control-label"> Age <span class="text-danger small">*</span></label>
-									<div class="col-sm-8">
-										<input type="number" class="form-control" id="age" name="age" placeholder="Age" >
-										<i class="fa fa-birthday-cake form-control-feedback"></i>
-									</div>
-								</div>
+                                <div class="form-group has-feedback">
+                                    <label for="inputMail" class="col-sm-3 control-label"> Adresse e-mail <span class="text-danger small">*</span></label>
+                                    <div class="col-sm-8">
+                                        <input type="email" class="form-control" id="mail" name="e_mail" placeholder="quelquechose@exemple.eu">
+                                        <i class="fa fa-envelope form-control-feedback"></i>
+                                    </div>
+                                </div>
 
                                 <div class="form-group has-feedback">
                                     <label class="col-sm-3 control-label"> Métier <span class="text-danger small">*</span> </label>
@@ -57,10 +57,10 @@
                                 </div>
 
                                 <div class="form-group has-feedback">
-                                    <label for="inputMail" class="col-sm-3 control-label"> Adresse e-mail <span class="text-danger small">*</span></label>
+                                    <label class="col-sm-3 control-label"> Diplome <span class="text-danger small">*</span> </label>
                                     <div class="col-sm-8">
-                                        <input type="email" class="form-control" id="mail" name="e_mail" placeholder="quelquechose@exemple.eu">
-                                        <i class="fa fa-envelope form-control-feedback"></i>
+                                        <input type="text" class="form-control" id="diplome" name="diplome" placeholder="Dernier_diplome_obtenu">
+                                        <i class="fa fa-send form-control-feedback"></i>
                                     </div>
                                 </div>
 
@@ -83,7 +83,7 @@
 								<div class="form-group">
 									<div class="col-sm-offset-3 col-sm-8">
 										<button type="submit" class="btn btn-group btn-default btn-animated" id="inscription" > S'inscrire <i class="fa fa-check"></i></button>
-                                        <button type="button" class="btn btn-group btn-default btn-animated" id="annuler"> Annuler <i class="fa fa-arrow-circle-right"> </i> </button>
+                                        <button type="button" class="btn btn-group btn-default btn-animated" id="annuler"> Annuler <i class="fa fa-times    "> </i> </button>
 									</div>
 								</div>
 							</form>

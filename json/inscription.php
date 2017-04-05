@@ -13,18 +13,11 @@ $reponse = 1;
 
 if(isset($_POST['e_mail'])){
 
-    if(!(isAlreadyUsed($_POST['e_mail']))){
-        //Utilisateur::creer_compte($_POST['nom'], $_POST['prenom'], $_POST['pseudo'],  $_POST['e_mail'], $_POST['password'],
-        /*$_POST['adresse'], $_POST['code_postal'], $_POST['ville'], $_POST['pays']);
-        $_SESSION['pseudo'] = $_POST['pseudo'];
-        $_SESSION['mail'] = $_POST['e_mail'];
-        $_SESSION['nom'] = $_POST['nom'];
-        $_SESSION['prenom'] = $_POST['prenom'];
-        $_SESSION['adresse'] = $_POST['adresse'];
-        $_SESSION['code_postal'] = $_POST['code_postal'];
-        $_SESSION['ville'] = $_POST['ville'];
-        $_SESSION['pays'] = $_POST['pays'];
-        $_SESSION['is_connect'] = true;*/
+    if(!(isAlreadyUsed($_POST['e_mail'])) && addUser($_POST['nom'], $_POST['prenom'], $_POST['e_mail'], $_POST['metier']
+            , $_POST['diplome'], $_POST['mot_de_passe']) != null){
+        $user = new User($_POST['e_mail'], $_POST['mot_de_passe']);
+        $_SESSION['user'] = $user;
+        $_SESSION['is_connect'] = true;
         $reponse = 0;
     }
     else

@@ -1,5 +1,5 @@
 <?php
-    require_once 'vue/header.php'
+    require_once 'vue/header.php';
 ?>
 
         <!-- scrollToTop -->
@@ -96,19 +96,26 @@
                                                         <li class="dropdown" id="menu_connect2" style="display: none;">
                                                             <a href="http://open-project.dromcorp.eu/recrutement.php"> Recrutement </a>
                                                         </li>
+                                                        <!-- header buttons -->
+                                                        <div class="header-dropdown-buttons" id="non_connect" style="display: none;">
+                                                            <a href="http://open-project.dromcorp.eu/inscription.php" class="btn btn-sm hidden-xs btn-default"> Inscription </a>
+                                                            <a href="http://open-project.dromcorp.eu/connexion.php" class="btn btn-sm hidden-xs btn-default"> Connexion </a>
+                                                        </div>
+                                                        <div class="header-dropdown-buttons" id="connect" style="display: none;">
+                                                         <?php if(isset($_SESSION['user'])){
+                                                         ?>
+
+                                                            <a href="http://open-project.dromcorp.eu/profil.php" class="btn btn-sm hidden-xs btn-default">(<?php echo ($_SESSION['user']->getSecondName(). " " . $_SESSION['user']->getFirstName());?>)</a>
+                                                            <button type="button" class="btn btn-sm hidden-xs btn-default" id="deconnexion"> Déconnexion </button>
+
+                                                         <?php
+                                                         }
+                                                         ?>
+
+                                                        </div>
+                                                        <!-- header buttons end-->
                                                     </ul>
                                                     <!-- main-menu end -->
-
-                                                    <!-- header buttons -->
-                                                    <div class="header-dropdown-buttons" id="non_connect" style="display: none;">
-                                                        <a href="http://open-project.dromcorp.eu/inscription.php" class="btn btn-sm hidden-xs btn-default"> Inscription </a>
-                                                        <a href="http://open-project.dromcorp.eu/connexion.php" class="btn btn-sm hidden-xs btn-default"> Connexion </a>
-                                                    </div>
-                                                    <div class="header-dropdown-buttons" id="connect" style="display: none;">
-                                                        <a href="http://open-project.dromcorp.eu/profil.php" class="btn btn-sm hidden-xs btn-default"> Profil </a>
-                                                        <button type="button" class="btn btn-sm hidden-xs btn-default" id="deconnexion"> Déconnexion </button>
-                                                    </div>
-                                                    <!-- header buttons end-->
 
                                                 </div>
 

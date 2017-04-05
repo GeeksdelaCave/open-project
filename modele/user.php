@@ -1,7 +1,8 @@
 <?php
 
 include_once "bdd.php";
-
+include_once "tache.php";
+include_once "Projet.php";
 class User
 {
     private $_id;
@@ -12,6 +13,7 @@ class User
     private $_diplomes;
     private $_available;
     private $_taches;
+    private $_projets;
 
     /**
      * User constructor.
@@ -21,7 +23,7 @@ class User
     {
         $bdd = connexionBD();
         $req = $bdd->prepare('SELECT * FROM UTILISATEUR WHERE mail = ? AND password = ?');
-        $req->execute(array($_email, $_password));
+        $req->execute(array($_email, sha1($_password)));
 
         while($donnee = $req->fetch()) {
 
@@ -35,19 +37,29 @@ class User
 
         }
 
-        if(!isset($_available)) {
-            $_available = false;
+        if(!isset($this->_available)) {
+            $this->_available = false;
         }
 
 
-        if($_available) {
-            $taches = $bdd->prepare('SELECT * FROM tache WHERE id_responsable = ?');
+        if($this->_available) {
+
+
+            $taches = $bdd->prepare('SELECT * FROM TACHE WHERE id_responsable = ?');
             $taches->execute(array($this->_id));
             while ($donnee = $taches->fetch()) {
 
-                array_push($this->_taches, new Tache($donnee['id_tache']));
+                $this->_taches[] = new Tache($donnee['id_tache']);
 
             }
+            $projets = $bdd->prepare('SELECT * FROM PROJET WHERE id_projet = (SELECT projet FROM PARTICIPER WHERE utilisateur = ?)');
+            $projets->execute(array($this->_id));
+            while ($donnee = $projets->fetch()) {
+                $this->_projets[] = new Projet($donnee['id_projet']);
+
+            }
+
+
         }
 
 
@@ -69,6 +81,10 @@ class User
         $update->execute(array($this->_first_name, $this->_second_name, $this->_age,$this->_email, $this->_avatar,$this->_diplomes, $this->_job, $this->_id));
     }
 
+    public function getProjets()
+    {
+        return $this->_projets;
+    }
     /**
      * @return mixed
      */
